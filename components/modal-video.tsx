@@ -65,8 +65,8 @@ export default function ModalVideo({
           />
         </figure>
         {/* Play icon */}
-        <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110">
-          <span className="relative flex items-center gap-3">
+        {/* <span className="pointer-events-none absolute p-2.5 before:absolute before:inset-0 before:rounded-full before:bg-gray-950 before:duration-300 group-hover:before:scale-110"> */}
+          {/* <span className="relative flex items-center gap-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={20}
@@ -98,8 +98,8 @@ export default function ModalVideo({
               <span className="text-gray-600"> - </span>
               3:47
             </span>
-          </span>
-        </span>
+          </span> */}
+        {/* </span> */}
       </button>
       {/* End: Video thumbnail */}
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
-import FeaturesImage from "@/public/images/features.png";
+import FeaturesImage from "@/public/images/key-features.png";
 
 export default function Features() {
   return (
@@ -36,17 +36,17 @@ export default function Features() {
           <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                Advanced Controls
+                Key Features
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Built for modern product teams
+              Your All-in-One Gaming Ally
             </h2>
-            <p className="text-lg text-indigo-200/65">
+            {/* <p className="text-lg text-indigo-200/65">
               Open AI reads and understands your files, and with nothing more
               than a single line of feedback, so you can go further than the
               speed of thought.
-            </p>
+            </p> */}
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
             <Image
@@ -73,12 +73,17 @@ export default function Features() {
                 />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Project Milestones
+                Personality and Customization
               </h3>
               <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                Create a companion that reflects the player's preferences.
               </p>
+              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                <li>Fully customizable appearance and personality traits.</li>
+                <li>Choose from pre-set personalities: humorous, serious, supportive, or adventurous.</li>
+                <li>Tailor the bot's voice, name, and interaction style.</li>
+                <li>Adaptive behavior that aligns with the player's in-game choices and playstyle.</li>
+              </ul>
             </article>
             <article>
               <svg
@@ -91,12 +96,17 @@ export default function Features() {
                 <path d="M19 6H0v2h17v8H7v-6H5v8h19v-2h-5V6Z" />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Team Views
+                Gameplay Assistance
               </h3>
               <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                Game rules, FAQ, notifications, and more.
               </p>
+              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                <li>Provide rules explanations, FAQs, and contextual tips to help players navigate the game.</li>
+                <li>Real-time notifications for critical game events, mission updates, and reminders.</li>
+                <li>Manage inventories, crafting, and resources gathering efficiently.</li>
+                <li>Adaptive suggestions basd on the player's current situation.</li>
+              </ul>
             </article>
             <article>
               <svg
@@ -112,12 +122,17 @@ export default function Features() {
                 />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Advanced Search
+                Emotional Bonding
               </h3>
               <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                Unique storylines and reactive dialogue.
               </p>
+              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                <li>Unique storylines that evolves based on the player's decisions.</li>
+                <li>Reactive dialogue that mirrors that player's actions and emotional journey.</li>
+                <li>Expresses emotions - joy, concern, exciement - to create a deeper connection.</li>
+                <li>Encourages replayability by offering alternate story arcs and outcomes.</li>
+              </ul>
             </article>
             <article>
               <svg
@@ -138,12 +153,17 @@ export default function Features() {
                 <path d="m16.321 2-.5-.866 1.733-1 .5.866A22 22 0 0 1 21 12c0 3.852-1.017 7.636-2.948 10.97l-.502.865-1.73-1.003.501-.865A19.878 19.878 0 0 0 19 12a20 20 0 0 0-2.679-10Z" />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Strategic Initiatives
+                World Interaction
               </h3>
               <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                Proactive hints, environmental problem-solving, and discovery.
               </p>
+              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                <li>Proactively offers hints for hidden items, side quests, or objectives.</li>
+                <li>Assists in solving environmental puzzbles and navigating challenging terrain.</li>
+                <li>Unlocking lore and backstory by identitying significant landmarks or objects.</li>
+                <li>Adapts interaction based on the game's evolving conditions (time, weather, or enemy activity).</li>
+              </ul>
             </article>
             <article>
               <svg
@@ -159,12 +179,17 @@ export default function Features() {
                 <path d="m7.454 2.891.891-.454L7.437.655l-.891.454a12 12 0 0 0 0 21.382l.89.454.91-1.781-.892-.455a10 10 0 0 1 0-17.818ZM17.456 1.11l-.891-.454-.909 1.782.891.454a10 10 0 0 1 0 17.819l-.89.454.908 1.781.89-.454a12 12 0 0 0 0-21.382Z" />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Flexible Workflows
+                Multiplayer Adaptation
               </h3>
               <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                Complements team dynamics and multiplayer games.
               </p>
+              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                <li>Support team dynamics by suggesting strategies and keeping tracking of objectives.</li>
+                <li>Communicates effectively with other players' companions for seamless coordination.</li>
+                <li>Fills essential roles (e.g. healer, scout, attacker) based on team needs.</li>
+                <li>Provides unique support for multiplayer modes, enahncing team synergy.</li>
+              </ul>
             </article>
             <article>
               <svg
@@ -180,12 +205,17 @@ export default function Features() {
                 <path d="M19.406 3.844 6.083 20.497.586 15 2 13.586l3.917 3.917L17.844 2.595l1.562 1.25Z" />
               </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
-                Unified Timeline
+                Multilanguages
               </h3>
               <p className="text-indigo-200/65">
-                Track progress across custom flows for your team. Find the right
-                balance for the user, privacy and security.
+                The bot adaptively use different languages matching palyer's preferences.
               </p>
+              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                <li>Supports multipe languages and adapts to the player's preferred language.</li>
+                <li>Seamless swithc between languages for multilingual players.</li>
+                <li>Localized cultural references to enhance immersion.</li>
+                <li>Ensures accessibility for diverse player communities worldwide.</li>
+              </ul>
             </article>
           </div>
         </div>
