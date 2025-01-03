@@ -1,9 +1,21 @@
+"use client";
 import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import FeaturesImage from "@/public/images/key-features.png";
+import React, { useState } from "react";
 
 export default function Features() {
+  const [isCollapsed1, setIsCollapsed1] = useState(true);
+  const [isCollapsed2, setIsCollapsed2] = useState(true);
+
+  const toggleCollapse1 = () => {
+    setIsCollapsed1(!isCollapsed1);
+  };
+  const toggleCollapse2 = () => {
+    setIsCollapsed2(!isCollapsed2);
+  };
+
   return (
     <section className="relative">
       <div
@@ -78,12 +90,20 @@ export default function Features() {
               <p className="text-indigo-200/65">
                 Create a companion that reflects the player's preferences.
               </p>
-              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
-                <li>Fully customizable appearance and personality traits.</li>
-                <li>Choose from pre-set personalities: humorous, serious, supportive, or adventurous.</li>
-                <li>Tailor the bot's voice, name, and interaction style.</li>
-                <li>Adaptive behavior that aligns with the player's in-game choices and playstyle.</li>
-              </ul>
+              <button
+                onClick={toggleCollapse1}
+                className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+              >
+                {isCollapsed1 ? "Show More" : "Show Less"}
+              </button>
+              {!isCollapsed1 && (
+                <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                  <li>Fully customizable appearance and personality traits.</li>
+                  <li>Choose from pre-set personalities: humorous, serious, supportive, or adventurous.</li>
+                  <li>Tailor the bot's voice, name, and interaction style.</li>
+                  <li>Adaptive behavior that aligns with the player's in-game choices and playstyle.</li>
+                </ul>
+              )}
             </article>
             <article>
               <svg
@@ -99,14 +119,22 @@ export default function Features() {
                 Gameplay Assistance
               </h3>
               <p className="text-indigo-200/65">
-                Game rules, FAQ, notifications, and more.
+                Game rules, FAQ, notifications, and quick tips to keep you ahead in every session.
               </p>
-              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
-                <li>Provide rules explanations, FAQs, and contextual tips to help players navigate the game.</li>
-                <li>Real-time notifications for critical game events, mission updates, and reminders.</li>
-                <li>Manage inventories, crafting, and resources gathering efficiently.</li>
-                <li>Adaptive suggestions basd on the player's current situation.</li>
-              </ul>
+              <button
+                onClick={toggleCollapse1}
+                className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+              >
+                {isCollapsed1 ? "Show More" : "Show Less"}
+              </button>
+              {!isCollapsed1 && (
+                <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                  <li>Provide rules explanations, FAQs, and contextual tips to help players navigate the game.</li>
+                  <li>Real-time notifications for critical game events, mission updates, and reminders.</li>
+                  <li>Manage inventories, crafting, and resources gathering efficiently.</li>
+                  <li>Adaptive suggestions basd on the player's current situation.</li>
+                </ul>
+              )}
             </article>
             <article>
               <svg
@@ -125,14 +153,22 @@ export default function Features() {
                 Emotional Bonding
               </h3>
               <p className="text-indigo-200/65">
-                Unique storylines and reactive dialogue.
+                Unique storylines, immersive narratives, and reactive dialogue that adapts to your choices.
               </p>
-              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
-                <li>Unique storylines that evolves based on the player's decisions.</li>
-                <li>Reactive dialogue that mirrors that player's actions and emotional journey.</li>
-                <li>Expresses emotions - joy, concern, exciement - to create a deeper connection.</li>
-                <li>Encourages replayability by offering alternate story arcs and outcomes.</li>
-              </ul>
+              <button
+                onClick={toggleCollapse1}
+                className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+              >
+                {isCollapsed1 ? "Show More" : "Show Less"}
+              </button>
+              {!isCollapsed1 && (
+                <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                  <li>Unique storylines that evolves based on the player's decisions.</li>
+                  <li>Reactive dialogue that mirrors that player's actions and emotional journey.</li>
+                  <li>Expresses emotions - joy, concern, exciement - to create a deeper connection.</li>
+                  <li>Encourages replayability by offering alternate story arcs and outcomes.</li>
+                </ul>
+              )}
             </article>
             <article>
               <svg
@@ -158,12 +194,20 @@ export default function Features() {
               <p className="text-indigo-200/65">
                 Proactive hints, environmental problem-solving, and discovery.
               </p>
-              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
-                <li>Proactively offers hints for hidden items, side quests, or objectives.</li>
-                <li>Assists in solving environmental puzzbles and navigating challenging terrain.</li>
-                <li>Unlocking lore and backstory by identitying significant landmarks or objects.</li>
-                <li>Adapts interaction based on the game's evolving conditions (time, weather, or enemy activity).</li>
-              </ul>
+              <button
+                onClick={toggleCollapse2}
+                className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+              >
+                {isCollapsed2 ? "Show More" : "Show Less"}
+              </button>
+              {!isCollapsed2 && (
+                <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                  <li>Proactively offers hints for hidden items, side quests, or objectives.</li>
+                  <li>Assists in solving environmental puzzbles and navigating challenging terrain.</li>
+                  <li>Unlocking lore and backstory by identitying significant landmarks or objects.</li>
+                  <li>Adapts interaction based on the game's evolving conditions (time, weather, or enemy activity).</li>
+                </ul>
+              )}
             </article>
             <article>
               <svg
@@ -184,12 +228,20 @@ export default function Features() {
               <p className="text-indigo-200/65">
                 Complements team dynamics and multiplayer games.
               </p>
-              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
-                <li>Support team dynamics by suggesting strategies and keeping tracking of objectives.</li>
-                <li>Communicates effectively with other players' companions for seamless coordination.</li>
-                <li>Fills essential roles (e.g. healer, scout, attacker) based on team needs.</li>
-                <li>Provides unique support for multiplayer modes, enahncing team synergy.</li>
-              </ul>
+              <button
+                onClick={toggleCollapse2}
+                className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+              >
+                {isCollapsed2 ? "Show More" : "Show Less"}
+              </button>
+              {!isCollapsed2 && (
+                <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                  <li>Support team dynamics by suggesting strategies and keeping tracking of objectives.</li>
+                  <li>Communicates effectively with other players' companions for seamless coordination.</li>
+                  <li>Fills essential roles (e.g. healer, scout, attacker) based on team needs.</li>
+                  <li>Provides unique support for multiplayer modes, enahncing team synergy.</li>
+                </ul>
+              )}
             </article>
             <article>
               <svg
@@ -210,12 +262,20 @@ export default function Features() {
               <p className="text-indigo-200/65">
                 The bot adaptively use different languages matching palyer's preferences.
               </p>
-              <ul className="mt-4 list-disc list-inside text-indigo-200/80">
-                <li>Supports multipe languages and adapts to the player's preferred language.</li>
-                <li>Seamless swithc between languages for multilingual players.</li>
-                <li>Localized cultural references to enhance immersion.</li>
-                <li>Ensures accessibility for diverse player communities worldwide.</li>
-              </ul>
+              <button
+                onClick={toggleCollapse2}
+                className="mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+              >
+                {isCollapsed2 ? "Show More" : "Show Less"}
+              </button>
+              {!isCollapsed2 && (
+                <ul className="mt-4 list-disc list-inside text-indigo-200/80">
+                  <li>Supports multipe languages and adapts to the player's preferred language.</li>
+                  <li>Seamless swithc between languages for multilingual players.</li>
+                  <li>Localized cultural references to enhance immersion.</li>
+                  <li>Ensures accessibility for diverse player communities worldwide.</li>
+                </ul>
+              )}
             </article>
           </div>
         </div>
